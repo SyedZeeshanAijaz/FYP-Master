@@ -1,0 +1,3 @@
+{
+    "mongoURI":"mongodb+srv://usama:usama@cluster0-e22ge.mongodb.net/BlogPost?retryWrites=true&w=majority"
+}
