@@ -6,7 +6,6 @@ import 'package:opusapp/screens/preference_shared/screenSizeConfig.dart';
 import 'package:opusapp/screens/login-signup/shared/STextField.dart';
 import 'package:opusapp/screens/login-signup/LoginScreen.dart';
 import 'package:opusapp/screens/constants/SColors.dart';
-import 'package:opusapp/utils/Http-Service.dart';
 import 'package:opusapp/screens/constants/SKey.dart';
 
 class ServiceProviderSignUpScreen extends StatefulWidget {
@@ -240,7 +239,7 @@ class _ServiceProviderSignUpScreenState
                                     ),
                                     onPressed: () async {
                                       if (_formKey.currentState.validate()) {
-                                        var service_provider = {
+                                        var serviceProvider = {
                                           "fullName":
                                               this.fullNameController.text,
                                           "email": this.emailController.text,
@@ -255,7 +254,7 @@ class _ServiceProviderSignUpScreenState
                                           "password":
                                               this.passwordController.text,
                                         };
-                                        print(service_provider);
+                                        print(serviceProvider);
                                         // navigation to profile creation screen with basic user created object
                                         Navigator.pushReplacement(
                                           context,
@@ -263,7 +262,7 @@ class _ServiceProviderSignUpScreenState
                                               builder: (context) =>
                                                   ServiceProviderProfileCreate(
                                                       service_provider:
-                                                          service_provider)),
+                                                          serviceProvider)),
                                         );
                                       } else {
                                         ScaffoldMessenger.of(context)

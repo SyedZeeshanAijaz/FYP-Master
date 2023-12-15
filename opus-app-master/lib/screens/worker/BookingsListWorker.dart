@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:opusapp/screens/constants/SColors.dart';
 import 'package:opusapp/screens/preference_shared/screenSizeConfig.dart';
-import 'package:opusapp/screens/services/PopUps/BookingsPopUp.dart';
 import 'package:opusapp/screens/services/Lists.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:opusapp/screens/services/WorkerDetails.dart';
 import 'package:opusapp/utils/Http-Service.dart';
 
 class BookingsListWorker extends StatefulWidget {
@@ -47,7 +45,7 @@ class _BookingsListWorkerState extends State<BookingsListWorker> {
   var rank;
   getRanking(id, prf) async {
     var a = (await ApiHandler()
-            .makeGetRequest("/worker/ranting/district/${id}/${prf}"))
+            .makeGetRequest("/worker/ranting/district/$id/$prf"))
         .data;
     print(a);
     rank = a["count"];

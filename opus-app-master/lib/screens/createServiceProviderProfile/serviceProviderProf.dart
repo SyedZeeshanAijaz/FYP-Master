@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:developer';
 import 'dart:io' as io;
 
 import 'package:ext_storage/ext_storage.dart';
@@ -140,7 +141,7 @@ class _ServiceProviderProfileCreateState
                             children: [
                               InkWell(
                                 onTap: () async {
-                                  await this._pickImageProfile();
+                                  this._pickImageProfile();
                                 },
                                 child: Container(
                                     child: Container(
@@ -403,7 +404,7 @@ class _ServiceProviderProfileCreateState
                                               children: [
                                                 InkWell(
                                                   onTap: () async {
-                                                    await this._pickImageCNIC();
+                                                    this._pickImageCNIC();
                                                   },
                                                   child: Text(
                                                     "CNIC PICTURE   ",
@@ -523,7 +524,7 @@ class _ServiceProviderProfileCreateState
                                                 var resp = await ApiHandler()
                                                     .makePostRequest(
                                                         "/worker", worker);
-                                                print(resp.data);
+                                                log(resp.data);
                                                 if (resp.data != null) {
                                                   try {
                                                     await openfile.delete();

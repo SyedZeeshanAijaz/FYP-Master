@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:opusapp/screens/constants/SColors.dart';
 import 'package:opusapp/screens/home/MenuScreen.dart';
 import 'package:opusapp/screens/preference_shared/screenSizeConfig.dart';
-import 'package:opusapp/screens/services/Lists.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:opusapp/utils/Http-Service.dart';
 

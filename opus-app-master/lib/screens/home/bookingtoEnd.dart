@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:opusapp/screens/constants/SColors.dart';
 import 'package:opusapp/screens/preference_shared/screenSizeConfig.dart';
-import 'package:opusapp/screens/services/PopUps/BookingsPopUp.dart';
-import 'package:opusapp/screens/services/Lists.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:opusapp/screens/services/PopUps/FeedBackPopUps.dart';
-import 'package:opusapp/screens/services/WorkerDetails.dart';
 import 'package:opusapp/utils/Http-Service.dart';
 import 'package:opusapp/utils/local-storage.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class BookingListTOEnd extends StatefulWidget {
   var bookings;

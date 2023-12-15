@@ -74,7 +74,7 @@ class _GridMenuScreenState extends State<GridMenuScreen> {
   Widget build(BuildContext context) {
     ScreenSizeConfig().init(context);
     int count = 3;
-    int total_elements = this.listMenus.length;
+    int totalElements = this.listMenus.length;
     if (ScreenSizeConfig.safeBlockHorizontal * 100 < 360) {
       count = 2;
     } else {
@@ -96,7 +96,7 @@ class _GridMenuScreenState extends State<GridMenuScreen> {
       ),
       body: GridView.count(
         crossAxisCount: count,
-        children: List.generate(total_elements, (index) {
+        children: List.generate(totalElements, (index) {
           return _cardOfService(listMenus[index]);
         }),
       ),

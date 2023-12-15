@@ -147,7 +147,7 @@ class _UpdateProfileCreateState extends State<UpdateProfileCreate> {
                             children: [
                               InkWell(
                                 onTap: () async {
-                                  await this._pickImageProfile();
+                                  this._pickImageProfile();
                                 },
                                 child: Container(
                                     child: Container(
@@ -412,7 +412,7 @@ class _UpdateProfileCreateState extends State<UpdateProfileCreate> {
                                               children: [
                                                 InkWell(
                                                   onTap: () async {
-                                                    await this._pickImageCNIC();
+                                                    this._pickImageCNIC();
                                                   },
                                                   child: Text(
                                                     "CNIC PICTURE   ",

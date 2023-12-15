@@ -20,10 +20,9 @@ router.post(
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ success: false, error: errors.array() });
+      return res.status(400).json({ success: false, error: errors.array() , message: 'Custom error message'});
     }
     try {
-      console.log(req.user);
       if (req.user.role == "worker") {
         var authUser = await Worker.findOne({ user_id: req.user._id });
       } else {
@@ -34,7 +33,6 @@ router.post(
       let token = await jwt.sign(authUser.toJSON(), "QWERTY", {
         expiresIn: 36000000,
       });
-
       return res.json({
         user_id: req.user._id,
         user: authUser,
@@ -43,7 +41,13 @@ router.post(
         user_role: req.user.role,
       });
     } catch (err) {
-      return res.status(500).json({ success: false, error: err });
+      console.log(err);
+      if (err.name === 'AuthenticationError') {
+        // Custom response for 401 Unauthorized error
+        return res.status(401).json({ success: false, message: 'Custom error message' });
+      } else {
+        return res.status(500).json({ success: false, error: err.message });
+      }
     }
   }
 );

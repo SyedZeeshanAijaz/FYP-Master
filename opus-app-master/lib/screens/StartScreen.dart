@@ -14,7 +14,6 @@ class StartScreen extends StatefulWidget {
 class _StartScreenState extends State<StartScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     initialize().then((e) {
       setState(() {});
@@ -53,7 +52,7 @@ class _StartScreenState extends State<StartScreen> {
                     height: ScreenSizeConfig.safeBlockVertical * 8,
                     width: ScreenSizeConfig.safeBlockHorizontal * 35,
                     padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
-                    child: RaisedButton(
+                    child: MaterialButton(
                       elevation: 10,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(70.0)),
@@ -85,7 +84,7 @@ class _StartScreenState extends State<StartScreen> {
                     height: ScreenSizeConfig.safeBlockVertical * 8,
                     width: ScreenSizeConfig.safeBlockHorizontal * 35,
                     padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
-                    child: RaisedButton(
+                    child: MaterialButton(
                       elevation: 10,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(70.0)),

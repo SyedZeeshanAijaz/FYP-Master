@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:opusapp/screens/constants/SColors.dart';
 import 'package:opusapp/screens/preference_shared/screenSizeConfig.dart';
 import 'package:opusapp/screens/services/BookingScreen.dart';
-import 'package:opusapp/screens/services/Lists.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:opusapp/utils/Http-Service.dart';
 import 'package:opusapp/utils/local-storage.dart';
 import 'package:opusapp/screens/login-signup/shared/STextField.dart';

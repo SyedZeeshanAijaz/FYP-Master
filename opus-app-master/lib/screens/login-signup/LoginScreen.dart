@@ -1,11 +1,11 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:opusapp/screens/constants/SColors.dart';
-import 'package:opusapp/screens/home/GridMenuScreen.dart';
 import 'package:opusapp/screens/home/MenuScreen.dart';
 import 'package:opusapp/screens/preference_shared/screenSizeConfig.dart';
 import 'package:opusapp/screens/login-signup/shared/STextField.dart';
-import 'package:opusapp/screens/login-signup/SignUpScreen.dart';
 import 'package:opusapp/screens/worker/WorkerMenuScreen.dart';
 import 'package:opusapp/utils/Http-Service.dart';
 import 'package:opusapp/utils/local-storage.dart';
@@ -183,7 +183,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                                         .makePostRequest(
                                                             "/login", login);
 
-                                                print(resp.data["token"]);
+                                                log("Hello ${resp.data}");
                                                 Storage.setValue("token",
                                                     resp.data["token"]);
                                                 Storage.setValue("user_role",

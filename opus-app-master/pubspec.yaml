@@ -38,9 +38,10 @@ dependencies:
   path_provider:
   image_picker:
   url_launcher:
-  flutter_email_sender:
+  # flutter_email_sender:
   audioplayers:
   google_maps_flutter:
+  # flutter_email_sender: ^6.0.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
